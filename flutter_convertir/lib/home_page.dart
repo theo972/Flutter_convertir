@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("Promotions"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(PercentPage.tag);},
-                      icon:Icon(Icons.percent),iconSize: 100),
+                      icon:Icon(Icons.developer_mode),iconSize: 100),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("conversion en binaire"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(BinaryPage.tag);},
-                      icon:Icon(Icons.numbers),iconSize: 100),
+                      icon:Icon(Icons.developer_mode),iconSize: 100),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("calcule d'aire"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(SquarePage.tag);},
-                      icon:Icon(Icons.square),iconSize: 100),
+                      icon:Icon(Icons.developer_mode),iconSize: 100),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
