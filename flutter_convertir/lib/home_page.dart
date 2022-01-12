@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "dart:math";
 import 'package:flutter_convertir/romain_page.dart';
 import 'package:flutter_convertir/age_page.dart';
 import 'package:flutter_convertir/binary_pages.dart';
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(DonneePage.tag);
                     },
                     icon: Icon(Icons.computer),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
             ),
             color: Color.fromARGB(255, 101, 147, 166),
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(AgePage.tag);
                     },
                     icon: Icon(Icons.cake),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
             ),
             color: Color.fromARGB(255, 101, 147, 166),
@@ -68,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.of(context).pushNamed(PercentPage.tag);
                   },
-                  icon: Icon(Icons.sell_outlined, size: 50),
+                  icon: Icon(Icons.sell_outlined, size: 25),
                 )
               ],
             ),
@@ -84,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(DatePage.tag);
                     },
                     icon: Icon(Icons.date_range),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
 
             ),
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(DatePage.tag);
                     },
                     icon: Icon(Icons.add_road),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
             ),
 
@@ -116,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(BinaryPage.tag);
                     },
                     icon: Icon(Icons.blur_circular),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
             ),
             color: Color.fromARGB(255, 101, 147, 166),
@@ -130,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.of(context).pushNamed(SquarePage.tag);
                   },
-                  icon: Icon(Icons.stop_outlined, size: 50),
+                  icon: Icon(Icons.stop_outlined, size: 25),
                 )
               ],
             ),
@@ -146,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushNamed(TempPage.tag);
                     },
                     icon: Icon(Icons.thermostat),
-                    iconSize: 50),
+                    iconSize: 25),
               ],
             ),
             color: Color.fromARGB(255, 101, 147, 166),
@@ -160,8 +161,9 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.of(context).pushNamed(RomePage.tag);
                     },
-                    icon: Icon(Icons.shield),
-                    iconSize: 50),
+                    icon: Icon(Icons.shield,size:25),
+                ),
+
               ],
 
             ),
