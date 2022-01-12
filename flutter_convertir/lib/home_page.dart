@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("conversions de données numérique "),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(DonneePage.tag);},
-                      icon:Icon(Icons.computer),iconSize: 100),
+                      icon:Icon(Icons.computer),iconSize: 25),
                 ],
               ),
 
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("information sur mon age "),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(AgePage.tag);},
-                      icon:Icon(Icons.cake),iconSize: 100),
+                      icon:Icon(Icons.cake),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("Promotions"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(PercentPage.tag);},
-                      icon:Icon(Icons.percent),iconSize: 100),
+                      icon:Icon(Icons.percent),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("calcule de date"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(DatePage.tag);},
-                      icon:Icon(Icons.date_range),iconSize: 100),
+                      icon:Icon(Icons.date_range),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("distance"),
               IconButton(
                   onPressed:(){Navigator.of(context).pushNamed(DatePage.tag);},
-                  icon:Icon(Icons.add_road),iconSize: 100),
+                  icon:Icon(Icons.add_road),iconSize: 25),
                   ],
             ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("conversion en binaire"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(BinaryPage.tag);},
-                      icon:Icon(Icons.numbers),iconSize: 100),
+                      icon:Icon(Icons.numbers),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("calcule d'aire"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(SquarePage.tag);},
-                      icon:Icon(Icons.square),iconSize: 100),
+                      icon:Icon(Icons.square),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("Temperature"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(TempPage.tag);},
-                      icon:Icon(Icons.thermostat),iconSize: 100),
+                      icon:Icon(Icons.thermostat),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("conversion en chiffre romain"),
                   IconButton(
                       onPressed:(){Navigator.of(context).pushNamed(RomePage.tag);},
-                      icon:Icon(Icons.shield),iconSize: 100),
+                      icon:Icon(Icons.shield),iconSize: 25),
                 ],
               ),
               color: Color.fromARGB(255, 101, 147, 166),
