@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         BinaryPage.tag: (context) => BinaryPage(),
         SquarePage.tag: (context) => SquarePage(),
         TempPage.tag: (context) => TempPage(),
-        RomePage.tag: (context) => RomePage(),
+        RomainPage.tag: (context) => RomainPage(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Coding ProjectFlutter Demo',
