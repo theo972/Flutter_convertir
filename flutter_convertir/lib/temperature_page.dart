@@ -16,12 +16,11 @@ class _TempPageState extends State<TempPage> {
 
 
     if (temp == "celsius"){
-      celsius = (int.parse(numberTemp)).toString();
+      celsius = numberTemp.toString();
       fahrenheit = ((double.parse(numberTemp) * 9/5) + 32).toDouble();
       kelvin = (double.parse(numberTemp) + 273.15).toDouble();
     }
     if (temp == 'fahrenheit') {
-      fahrenheit = double.parse(numberTemp).toDouble();
       celsius = ((double.parse(numberTemp) - 32) * 5/9).toString();
       kelvin = ((double.parse(numberTemp) - 32) * 5/9 + 273.15).toDouble();
     }
@@ -33,14 +32,21 @@ class _TempPageState extends State<TempPage> {
 
 
     setState(() {
-      celsiusController.text = celsius.toString();
-      celsiusController.selection = TextSelection.fromPosition(TextPosition(offset: celsiusController.text.length));
+      if(temp != "celsius") {
+        celsiusController.text = celsius.toString();
+        celsiusController.selection = TextSelection.fromPosition(TextPosition(offset: celsiusController.text.length));
+      }
 
-      fahrenheitController.text = fahrenheit.toString();
-      fahrenheitController.selection = TextSelection.fromPosition(TextPosition(offset: fahrenheitController.text.length));
+      if (temp != 'fahrenheit') {
+        fahrenheitController.text = fahrenheit.toString();
+        fahrenheitController.selection = TextSelection.fromPosition(TextPosition(offset: fahrenheitController.text.length));
+      }
 
-      kelvinController.text = kelvin.toString();
-      kelvinController.selection = TextSelection.fromPosition(TextPosition(offset: kelvinController.text.length));
+      if (temp != 'kelvin') {
+        kelvinController.text = kelvin.toString();
+        kelvinController.selection = TextSelection.fromPosition(TextPosition(offset: kelvinController.text.length));
+      }
+
 
     });
 
