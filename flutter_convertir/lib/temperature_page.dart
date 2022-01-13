@@ -12,20 +12,24 @@ class TempPage extends StatefulWidget {
 class _TempPageState extends State<TempPage> {
 
 
-  convert_temp(numberTemp, temp) {
+  void convert_temp(numberTemp, temp) {
 
 
     if (temp == "celsius"){
-      fahrenheit = ((double.parse(numberTemp) * 9/5) + 32);
-      kelvin = double.parse(numberTemp) + 273.15;
+      celsius = (int.parse(numberTemp)).toString();
+      fahrenheit = ((double.parse(numberTemp) * 9/5) + 32).toDouble();
+      kelvin = (double.parse(numberTemp) + 273.15).toDouble();
     }
     if (temp == 'fahrenheit') {
-
+      fahrenheit = double.parse(numberTemp).toDouble();
+      celsius = ((double.parse(numberTemp) - 32) * 5/9).toString();
+      kelvin = ((double.parse(numberTemp) - 32) * 5/9 + 273.15).toDouble();
     }
     if (temp == 'kelvin') {
-
+      kelvin = double.parse(numberTemp).toDouble();
+      fahrenheit = ((double.parse(numberTemp) - 273.15) * 9/5 + 32).toDouble();
+      celsius = (double.parse(numberTemp) - 273.15).toString();
     }
-
 
 
     setState(() {
@@ -44,7 +48,7 @@ class _TempPageState extends State<TempPage> {
 
   static const String _title = "Convertisseur Temperature";
 
-  int celsius = 0;
+  String celsius = '';
   double fahrenheit = 0;
   double kelvin = 0;
 
