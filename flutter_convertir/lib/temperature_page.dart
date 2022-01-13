@@ -31,7 +31,7 @@ class _TempPageState extends State<TempPage> {
 */
     }
     if (selectedValue == "Fahrenheit") {
-      valueConvert = ((int.parse(myController.text) * 9 / 5) + 32) as String;
+      valueConvert = ((double.parse(myController.text) * 9 / 5) + 32).toString() + 'F';
       print(valueConvert);
     }
     if (selectedValue == "Kelvin"){
