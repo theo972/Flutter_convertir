@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,52 +22,68 @@ class _RomainPageState extends State<RomainPage> {
     super.dispose();
   }
 
+
   String convertToRoman(String textField) {
-    if (textField == "") {
+
+
+    if (textField == "" ) {
       return "";
-    } else {
-      String res = '';
+    }
+
+
+    else {
+      String res = "";
       int nb = int.parse(textField);
-      if (nb >= 1000) {
-        res += 'M';
-        nb -= 1000;
+      if (nb < 0 || nb > 3999){
+        res = "Pas de triche ! Les romains n'avaient pas de nombre plus grand que 3999";
+        return res;
       }
-      if (nb >= 500) {
-        res += 'D';
-        nb -= 500;
+      //ICI
+      for  (res = ''; nb >= 1000 ; nb = nb - 1000){
+        res = res + "M";
       }
-      if (nb >= 100) {
-        res += 'C';
-        nb -= 100;
+      for (res = res ; nb >= 900; nb = nb - 900){
+        res = res + "CM";
       }
-      if (nb >= 50) {
-        res += 'L';
-        nb -= 50;
+      for (res = res ; nb >= 500 ; nb = nb - 500){
+        res = res + "D";
       }
-      while (nb >= 10) {
-        res += 'X';
-        nb -= 10;
+      for (res = res ; nb >= 400 ; nb = nb - 400){
+        res = res + "CD";
       }
-      if (nb == 9) {
-        res += 'IX';
-        nb -= 9;
+      for (res = res ; nb >= 100 ; nb = nb - 100){
+        res = res + "C";
       }
-      if (nb >= 5) {
-        res += 'V';
-        nb -= 5;
+      for (res = res ; nb >= 90 ; nb = nb - 90){
+        res = res + "XC";
       }
-      if (nb == 4) {
-        res += 'IV';
-        nb -= 4;
+      for (res = res ; nb >= 50 ; nb = nb - 50){
+        res = res + "L";
       }
-      while (nb > 0) {
-        res += 'I';
-        nb -= 1;
+      for (res = res ; nb >= 40 ; nb = nb - 40){
+        res = res + "XL";
       }
+      for (res = res ; nb >= 10 ; nb = nb - 10){
+        res = res + "X";
+      }
+      for (res = res ; nb >= 9 ; nb = nb - 9){
+        res = res + "IX";
+      }
+      for (res = res ; nb >= 5 ; nb = nb - 5){
+        res = res + "V";
+      }
+      for (res = res ; nb >= 4 ; nb = nb - 4){
+        res = res + "IV";
+      }
+      for (res = res ; nb >= 1 ; nb = nb - 1){
+        res = res + "I";
+      }
+      //A ICI
       String resString = res.toString();
       return resString;
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
