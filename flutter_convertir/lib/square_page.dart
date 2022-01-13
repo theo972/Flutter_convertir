@@ -11,37 +11,37 @@ class _HomePageState extends State<SquarePage> {
 
 
   toto(textcenti) {
-    Nombre_centimetre = '';
-    Nombre_metre = '';
-    Nombre_acre = '';
-    Nombre_hectar = '';
-    Nombre_kilo = '';
+    Nombre_centimetre = 0;
 
-    Nombre_centimetre = textcenti;
-    Nombre_metre = (double.parse('$textcenti') / 1e4).toString();
-    Nombre_acre = (double.parse('$textcenti') / 4.047e7).toString();
-    Nombre_hectar = (double.parse('$textcenti') / 1e8).toString();
-    Nombre_kilo = (double.parse('$textcenti') / 1e10).toString();
+    Nombre_centimetre = int.parse(textcenti);
+    Nombre_metre = double.parse('$textcenti') / 1e4;
+    Nombre_acre = double.parse('$textcenti') / 4.047e7;
+    Nombre_hectar = double.parse('$textcenti') / 1e8;
+    Nombre_kilo = double.parse('$textcenti') / 1e10;
 
 
     setState(() {
-      myControllermetre.text = Nombre_metre;
-      myControlleracre.text = Nombre_acre;
-      myControllercenti.text = Nombre_centimetre;
-      myControllerkilo.text = Nombre_kilo;
-      myControllerhect.text = Nombre_hectar;
+      myControllermetre.text = Nombre_metre.toString();
+      myControllermetre.selection = TextSelection.fromPosition(TextPosition(offset: myControllermetre.text.length));
+      myControlleracre.text = Nombre_acre.toString();
+      myControlleracre.selection = TextSelection.fromPosition(TextPosition(offset: myControlleracre.text.length));
+      myControllercenti.text = Nombre_centimetre.toString();
+      myControllercenti.selection = TextSelection.fromPosition(TextPosition(offset: myControllercenti.text.length));
+      myControllerkilo.text = Nombre_kilo.toString();
+      myControllerkilo.selection = TextSelection.fromPosition(TextPosition(offset: myControllerkilo.text.length));
+      myControllerhect.text = Nombre_hectar.toString();
+      myControllerhect.selection = TextSelection.fromPosition(TextPosition(offset: myControllerhect.text.length));
     });
-
 
   }
 
   static const String _title = "Conversion d'aires";
 
-  String Nombre_centimetre = '';
-  String Nombre_metre = '';
-  String Nombre_acre = '';
-  String Nombre_hectar = '';
-  String Nombre_kilo = '';
+  int Nombre_centimetre = 0;
+  double Nombre_metre = 0;
+  double Nombre_acre = 0;
+  double Nombre_hectar = 0;
+  double Nombre_kilo = 0;
 
   final myControllercenti = TextEditingController();
   final myControllermetre = TextEditingController();
@@ -64,15 +64,16 @@ class _HomePageState extends State<SquarePage> {
               width: 400.0,
               child: TextField(
                 controller: myControllercenti,
+
                 onChanged: (textcenti) {
                   toto(textcenti);
                 },
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12.0,
                   height: 2.0,
                 ),
                 obscureText: false,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Centimètre carré ',
                 ),
@@ -90,12 +91,12 @@ class _HomePageState extends State<SquarePage> {
                 onChanged: (textmetre) {
                   toto(textmetre);
                 },
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 12.0,
                   height: 2.0,
                 ),
                 obscureText: false,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'mètre carré',
                 ),
