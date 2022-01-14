@@ -10,14 +10,56 @@ class SquarePage extends StatefulWidget {
 class _HomePageState extends State<SquarePage> {
 
 
-  toto(textcenti) {
-    Nombre_centimetre = 0;
+  toto(text,String) {
 
-    Nombre_centimetre = int.parse(textcenti);
-    Nombre_metre = double.parse('$textcenti') / 1e4;
-    Nombre_acre = double.parse('$textcenti') / 4.047e7;
-    Nombre_hectar = double.parse('$textcenti') / 1e8;
-    Nombre_kilo = double.parse('$textcenti') / 1e10;
+
+    if(text != 0 && String == 'centi'){
+      Nombre_centimetre = (double.parse('$text')*1).toDouble();
+      Nombre_metre = (double.parse('$text') / 1e4).toDouble();
+      Nombre_acre = (double.parse('$text')/ 4.047e7).toDouble();
+      Nombre_hectar = (double.parse('$text') ~/ 1e8).toDouble();
+      Nombre_kilo = (double.parse('$text') ~/ 1e10).toDouble();
+
+    }
+
+    if(text != 0 && String == 'metre'){
+      Nombre_centimetre = (double.parse('$text')*10000).toDouble();
+      Nombre_metre = (double.parse('$text')).toDouble();
+      Nombre_acre = (double.parse('$text') ~/ 4047).toDouble();
+      Nombre_hectar = (double.parse('$text') ~/  10000).toDouble();
+      Nombre_kilo = (double.parse('$text') ~/ 1e6).toDouble();
+
+    }
+    if(text != 0 && String == 'acre'){
+      Nombre_centimetre = (double.parse('$text')*4.047e7).toDouble();
+      Nombre_metre = (double.parse('$text')*4047).toDouble();
+      Nombre_acre = (double.parse('$text')).toDouble();
+      Nombre_hectar = (double.parse('$text') ~/  2.471).toDouble();
+      Nombre_kilo = (double.parse('$text') ~/ 247).toDouble();
+
+    }
+
+    if(text != 0 && String == 'hect'){
+      Nombre_centimetre = (double.parse('$text')*1e8).toDouble();;
+      Nombre_metre = (double.parse('$text')*10000).toDouble();
+      Nombre_acre = (double.parse('$text')*2.471).toDouble();
+      Nombre_hectar = (double.parse('$text')).toDouble();
+      Nombre_kilo = (double.parse('$text') ~/ 100).toDouble();
+
+    }
+
+    if(text != 0 && String == 'kilo'){
+      Nombre_centimetre = (double.parse('$text')*1e10).toDouble();
+      Nombre_metre = (double.parse('$text')*1e6).toDouble();
+      Nombre_acre = (double.parse('$text')*247).toDouble();
+      Nombre_hectar = (double.parse('$text')*100).toDouble();
+      Nombre_kilo = (double.parse('$text')).toDouble();
+
+    }
+
+
+
+
 
 
     setState(() {
@@ -37,7 +79,7 @@ class _HomePageState extends State<SquarePage> {
 
   static const String _title = "Conversion d'aires";
 
-  int Nombre_centimetre = 0;
+  double Nombre_centimetre = 0;
   double Nombre_metre = 0;
   double Nombre_acre = 0;
   double Nombre_hectar = 0;
@@ -65,8 +107,8 @@ class _HomePageState extends State<SquarePage> {
               child: TextField(
                 controller: myControllercenti,
 
-                onChanged: (textcenti) {
-                  toto(textcenti);
+                onChanged: (text) {
+                  toto(text, "centi");
                 },
                 style: const TextStyle(
                   fontSize: 12.0,
@@ -88,8 +130,8 @@ class _HomePageState extends State<SquarePage> {
               width: 400.0,
               child: TextField(
                 controller: myControllermetre,
-                onChanged: (textmetre) {
-                  toto(textmetre);
+                onChanged: (text) {
+                  toto(text, "metre");
                 },
                 style: const TextStyle(
                   fontSize: 12.0,
@@ -111,8 +153,8 @@ class _HomePageState extends State<SquarePage> {
               width: 400.0,
               child: TextField(
                 controller: myControlleracre,
-                onChanged: (textacre) {
-                  toto(textacre);
+                onChanged: (text) {
+                  toto(text,'acre');
                 },
                 style: TextStyle(
                   fontSize: 12.0,
@@ -134,8 +176,8 @@ class _HomePageState extends State<SquarePage> {
               width: 400.0,
               child: TextField(
                 controller: myControllerhect,
-                onChanged: (texthect) {
-                  toto(texthect);
+                onChanged: (text) {
+                  toto(text, 'hect');
                 },
                 style: TextStyle(
                   fontSize: 12.0,
@@ -157,8 +199,8 @@ class _HomePageState extends State<SquarePage> {
               width: 400.0,
               child: TextField(
                 controller: myControllerkilo,
-                onChanged: (textkilo) {
-                  toto(textkilo);
+                onChanged: (text) {
+                  toto(text,'kilo');
                 },
                 style: TextStyle(
                   fontSize: 12.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_convertir/distance_page.dart';
 import "dart:math";
 import 'package:flutter_convertir/romain_page.dart';
 import 'package:flutter_convertir/age_page.dart';
@@ -98,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                 const Text("distance"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(DatePage.tag);
+                      Navigator.of(context).pushNamed(DistancePage.tag);
                     },
                     icon: Icon(Icons.add_road),
                     iconSize: 25),
