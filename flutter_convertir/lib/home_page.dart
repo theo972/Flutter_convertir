@@ -12,6 +12,7 @@ import 'package:flutter_convertir/square_page.dart';
 import 'package:flutter_convertir/temperature_page.dart';
 import 'package:flutter_convertir/global.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HomePage extends StatefulWidget {
   static const tag = "Home_Page";
@@ -304,6 +305,21 @@ class gridListView extends State<listbody> {
                       Navigator.of(context).pushNamed(TempPage.tag);
                     },
                     icon: Icon(Icons.thermostat),
+                    iconSize: 25),
+              ],
+            ),
+            color: Color.fromARGB(255, 101, 147, 166),
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              children: [
+                const Text("Conversion d'aires"),
+                IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(SquarePage.tag);
+                    },
+                    icon: Icon(Icons.square_foot),
                     iconSize: 25),
               ],
             ),
