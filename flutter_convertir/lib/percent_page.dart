@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 class PercentPage extends StatefulWidget {
   static const tag = "Percent_page";
+  static const index = 1;
 
   @override
   _PercentPageState createState() => _PercentPageState();
