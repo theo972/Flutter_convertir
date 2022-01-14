@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
         SquarePage.tag: (context) => SquarePage(),
         TempPage.tag: (context) => TempPage(),
         RomainPage.tag: (context) => RomainPage(),
+        HomePage.tag: (context) => HomePage(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Coding ProjectFlutter Demo',
