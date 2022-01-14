@@ -14,6 +14,7 @@ class RomainPage extends StatefulWidget {
 class _RomainPageState extends State<RomainPage> {
   String formFieldValue = "0";
 
+  /*Controller initialisation, it will retrieve the input content : the number */
   final myController = TextEditingController();
 
   @override
@@ -22,60 +23,56 @@ class _RomainPageState extends State<RomainPage> {
     super.dispose();
   }
 
-
+  /*This function transform a number to a Roman number  */
   String convertToRoman(String textField) {
-
-
-    if (textField == "" ) {
+    if (textField == "") {
       return "";
-    }
-
-
-    else {
+    } else {
       String res = "";
       int nb = int.parse(textField);
-      if (nb < 0 || nb > 3999){
-        res = "Pas de triche ! Les romains n'avaient pas de nombre plus grand que 3999";
+      if (nb < 0 || nb > 3999) {
+        res =
+            "Pas de triche ! Les romains n'avaient pas de nombre plus grand que 3999";
         return res;
       }
       //ICI
-      for  (res = ''; nb >= 1000 ; nb = nb - 1000){
+      for (res = ''; nb >= 1000; nb = nb - 1000) {
         res = res + "M";
       }
-      for (res = res ; nb >= 900; nb = nb - 900){
+      for (res = res; nb >= 900; nb = nb - 900) {
         res = res + "CM";
       }
-      for (res = res ; nb >= 500 ; nb = nb - 500){
+      for (res = res; nb >= 500; nb = nb - 500) {
         res = res + "D";
       }
-      for (res = res ; nb >= 400 ; nb = nb - 400){
+      for (res = res; nb >= 400; nb = nb - 400) {
         res = res + "CD";
       }
-      for (res = res ; nb >= 100 ; nb = nb - 100){
+      for (res = res; nb >= 100; nb = nb - 100) {
         res = res + "C";
       }
-      for (res = res ; nb >= 90 ; nb = nb - 90){
+      for (res = res; nb >= 90; nb = nb - 90) {
         res = res + "XC";
       }
-      for (res = res ; nb >= 50 ; nb = nb - 50){
+      for (res = res; nb >= 50; nb = nb - 50) {
         res = res + "L";
       }
-      for (res = res ; nb >= 40 ; nb = nb - 40){
+      for (res = res; nb >= 40; nb = nb - 40) {
         res = res + "XL";
       }
-      for (res = res ; nb >= 10 ; nb = nb - 10){
+      for (res = res; nb >= 10; nb = nb - 10) {
         res = res + "X";
       }
-      for (res = res ; nb >= 9 ; nb = nb - 9){
+      for (res = res; nb >= 9; nb = nb - 9) {
         res = res + "IX";
       }
-      for (res = res ; nb >= 5 ; nb = nb - 5){
+      for (res = res; nb >= 5; nb = nb - 5) {
         res = res + "V";
       }
-      for (res = res ; nb >= 4 ; nb = nb - 4){
+      for (res = res; nb >= 4; nb = nb - 4) {
         res = res + "IV";
       }
-      for (res = res ; nb >= 1 ; nb = nb - 1){
+      for (res = res; nb >= 1; nb = nb - 1) {
         res = res + "I";
       }
       //A ICI
@@ -83,7 +80,6 @@ class _RomainPageState extends State<RomainPage> {
       return resString;
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
