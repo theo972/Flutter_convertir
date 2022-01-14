@@ -69,7 +69,7 @@ class DatePageState extends State<DatePage> {
         title: const Text("Temps écouler entre deux dates"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column (
           children: [
             const Text("Quelle est la première date :"),

@@ -70,7 +70,7 @@ class _TempPageState extends State<TempPage> {
         title: const Text(_title),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(

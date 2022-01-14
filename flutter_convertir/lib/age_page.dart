@@ -92,7 +92,7 @@ class AgePageState extends State<AgePage> {
         title: const Text("Mais quel age j'ai ?"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column (
           children: [
             const Text("Donne-moi la date à laquelle tu es née :"),

@@ -56,7 +56,7 @@ class _PercentPageState extends State<PercentPage> {
         title: const Text("Promotion"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(children: [
           TextField(
             controller: myController,

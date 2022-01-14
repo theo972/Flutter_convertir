@@ -177,7 +177,7 @@ class _HomePageState extends State<DistancePage> {
         title: Text(_title),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(

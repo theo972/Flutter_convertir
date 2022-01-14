@@ -92,7 +92,7 @@ class _RomainPageState extends State<RomainPage> {
         title: const Text("Convertir en chiffre Romain"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(children: [
           TextField(
             controller: myController,

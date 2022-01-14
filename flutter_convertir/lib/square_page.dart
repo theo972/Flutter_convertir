@@ -98,7 +98,7 @@ class _HomePageState extends State<SquarePage> {
         title: Text(_title),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
