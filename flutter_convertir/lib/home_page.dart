@@ -212,7 +212,11 @@ class gridListView extends State<listbody> {
                 const Text("conversions de données numérique "),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(DonneePage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: DonneePage()));
                     },
                     icon: Icon(Icons.computer),
                     iconSize: 25),
@@ -227,7 +231,11 @@ class gridListView extends State<listbody> {
                 const Text("information sur mon age "),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(AgePage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: AgePage()));
                     },
                     icon: Icon(Icons.cake),
                     iconSize: 25),
@@ -242,7 +250,11 @@ class gridListView extends State<listbody> {
                 const Text("Promotions"),
                 IconButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(PercentPage.tag);
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade,
+                            child: PercentPage()));
                   },
                   icon: Icon(Icons.sell_outlined, size: 25),
                 )
@@ -257,7 +269,12 @@ class gridListView extends State<listbody> {
                 const Text("calcule de date"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(DatePage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.topToBottom,
+                              child: DatePage()));
+                      ;
                     },
                     icon: Icon(Icons.date_range),
                     iconSize: 25),
@@ -272,7 +289,11 @@ class gridListView extends State<listbody> {
                 const Text("distance"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(DistancePage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.bottomToTop,
+                              child: DistancePage()));
                     },
                     icon: Icon(Icons.add_road),
                     iconSize: 25),
@@ -287,7 +308,12 @@ class gridListView extends State<listbody> {
                 const Text("conversion en binaire"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(BinaryPage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.scale,
+                              alignment: Alignment.bottomCenter,
+                              child: BinaryPage()));
                     },
                     icon: Icon(Icons.blur_circular),
                     iconSize: 25),
@@ -302,7 +328,12 @@ class gridListView extends State<listbody> {
                 const Text("Temperature"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(TempPage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.size,
+                              alignment: Alignment.bottomCenter,
+                              child: TempPage()));
                     },
                     icon: Icon(Icons.thermostat),
                     iconSize: 25),
@@ -317,7 +348,11 @@ class gridListView extends State<listbody> {
                 const Text("Conversion d'aires"),
                 IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(SquarePage.tag);
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRightWithFade,
+                              child: SquarePage()));
                     },
                     icon: Icon(Icons.square_foot),
                     iconSize: 25),
@@ -332,7 +367,11 @@ class gridListView extends State<listbody> {
                 const Text("conversion en chiffre romain"),
                 IconButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(RomainPage.tag);
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeftWithFade,
+                            child: RomainPage()));
                   },
                   icon: Icon(Icons.shield, size: 25),
                 ),
