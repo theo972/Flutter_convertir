@@ -15,7 +15,9 @@ class _PercentPageState extends State<PercentPage> {
 
   @override
   void dispose() {
+    /*Controller initialisation, it will retrieve the input content of the initial price  */
     myController.dispose();
+    /*Controller initialisation, it will retrieve the input content of the discount percentage  */
     mySecondController.dispose();
     super.dispose();
   }
@@ -23,6 +25,8 @@ class _PercentPageState extends State<PercentPage> {
   String formFieldValue = "1";
 
   // ignore: non_constant_identifier_names
+
+  /*This function calculate the discount with the initial price and the discount percentage  */
   String setDiscount(String Text, String coeff) {
     if (Text == "" || coeff == "") {
       return "";
@@ -36,6 +40,7 @@ class _PercentPageState extends State<PercentPage> {
     }
   }
 
+  /*This function calculate the economy amount between the initial price and the new price  */
   String getEconomy(String prixAvant, String prixApres) {
     if (prixAvant == "" || prixApres == "") {
       return "";
@@ -121,8 +126,4 @@ class _PercentPageState extends State<PercentPage> {
       ),
     );
   }
-}
-
-class ListItem {
-  ListItem(int i, String s);
 }
