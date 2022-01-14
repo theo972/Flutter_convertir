@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
       Global.IndexList = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,15 +81,12 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-
 class listbody extends StatefulWidget {
   const listbody({Key? key}) : super(key: key);
 
-    @override
-    gridListView createState() => gridListView();
-
+  @override
+  gridListView createState() => gridListView();
 }
-
 
 class gridListView extends State<listbody> {
   @override
@@ -263,7 +261,6 @@ class gridListView extends State<listbody> {
                     icon: Icon(Icons.date_range),
                     iconSize: 25),
               ],
-
             ),
             color: Color.fromARGB(255, 101, 147, 166),
           ),
@@ -280,7 +277,6 @@ class gridListView extends State<listbody> {
                     iconSize: 25),
               ],
             ),
-
             color: Color.fromARGB(255, 101, 147, 166),
           ),
           Container(
@@ -322,50 +318,46 @@ class gridListView extends State<listbody> {
                   onPressed: () {
                     Navigator.of(context).pushNamed(RomainPage.tag);
                   },
-                  icon: Icon(Icons.shield,size:25),
+                  icon: Icon(Icons.shield, size: 25),
                 ),
-
               ],
-
             ),
             color: Color.fromARGB(255, 101, 147, 166),
           ),
         ],
       );
     }
-    if (Global.IndexList == 1){
+    if (Global.IndexList == 1) {
       return SafeArea(
-        child: Column(
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              height: 70,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  child: Center(
-                  child: Text('Choisis un utilitaire'),
-                ),
+          child: Column(
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            height: 70,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15.0),
+              child: Center(
+                child: Text('Choisis un utilitaire'),
               ),
             ),
-            Expanded(
+          ),
+          Expanded(
               child: Container(
-              color: Colors.white,
-                child: VerticalCardPager(
-                  textStyle: TextStyle(color: Colors.blue),
-                  titles: titles,
-                  images: images,
-                  onPageChanged: (page) {},
-                  onSelectedItem: (index) {
-                    Navigator.of(context).pushNamed(getPageTag(index));
-                  },
-                )
-              )
-            )
-          ],
-        )
-    );
+                  color: Colors.white,
+                  child: VerticalCardPager(
+                    textStyle:
+                        TextStyle(color: Color.fromARGB(255, 101, 147, 166)),
+                    titles: titles,
+                    images: images,
+                    onPageChanged: (page) {},
+                    onSelectedItem: (index) {
+                      Navigator.of(context).pushNamed(getPageTag(index));
+                    },
+                  )))
+        ],
+      ));
     } else {
-      return ListView (
+      return ListView(
         children: [
           Card(
             color: Colors.green[100],
@@ -375,11 +367,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.computer,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.computer, color: Colors.cyan, size: 45),
                   title: Text(
                     "conversions de données numérique",
                     style: TextStyle(fontSize: 20),
@@ -399,11 +387,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.cake,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.cake, color: Colors.cyan, size: 45),
                   title: Text(
                     "information sur mon age",
                     style: TextStyle(fontSize: 20),
@@ -412,7 +396,6 @@ class gridListView extends State<listbody> {
                     Navigator.of(context).pushNamed(AgePage.tag);
                   },
                 ),
-
               ],
             ),
           ),
@@ -424,11 +407,8 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.sell_outlined,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading:
+                      Icon(Icons.sell_outlined, color: Colors.cyan, size: 45),
                   title: Text(
                     "Promotions",
                     style: TextStyle(fontSize: 20),
@@ -448,11 +428,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.date_range,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.date_range, color: Colors.cyan, size: 45),
                   title: Text(
                     "calcule de date",
                     style: TextStyle(fontSize: 20),
@@ -472,11 +448,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.add_road,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.add_road, color: Colors.cyan, size: 45),
                   title: Text(
                     "distance",
                     style: TextStyle(fontSize: 20),
@@ -496,11 +468,8 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.blur_circular,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading:
+                      Icon(Icons.blur_circular, color: Colors.cyan, size: 45),
                   title: Text(
                     "conversion en binaire",
                     style: TextStyle(fontSize: 20),
@@ -520,11 +489,8 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.stop_outlined,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading:
+                      Icon(Icons.stop_outlined, color: Colors.cyan, size: 45),
                   title: Text(
                     "calcule d'aire",
                     style: TextStyle(fontSize: 20),
@@ -544,11 +510,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.thermostat,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.thermostat, color: Colors.cyan, size: 45),
                   title: Text(
                     "Temperature",
                     style: TextStyle(fontSize: 20),
@@ -568,11 +530,7 @@ class gridListView extends State<listbody> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListTile(
-                  leading: Icon (
-                      Icons.shield,
-                      color: Colors.cyan,
-                      size: 45
-                  ),
+                  leading: Icon(Icons.shield, color: Colors.cyan, size: 45),
                   title: Text(
                     "conversion en chiffre romain",
                     style: TextStyle(fontSize: 20),
@@ -581,17 +539,13 @@ class gridListView extends State<listbody> {
                     Navigator.of(context).pushNamed(RomainPage.tag);
                   },
                 ),
-
               ],
             ),
           ),
-
         ],
-
       );
     }
   }
-
 }
 
 /*
